@@ -9,8 +9,10 @@ $email = $_POST['email'];
 
 $mysqli = "INSERT INTO employee_table (employee_table_employee_id, employee_table_firstName, employee_table_lastName, employee_table_email) VALUES ('$employee_id','$firstName','$lastName', '$email');";
 mysqli_query($con, $mysqli);
+header("Location:../index.php?item_recorded");
 
-header("Location:../index.php?signup=recorded");
+
+
 
 
 

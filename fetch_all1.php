@@ -1,17 +1,9 @@
-✅ WORKS
 <?php
 include_once "./includes/connect1.php";
 $fetch = mysqli_query($conn,"SELECT * FROM list;");
+include "./templates/header.php";
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bernice's Employee list</title>
-</head>
 <body>
     <?php
     $x=0;
@@ -55,5 +47,4 @@ $fetch = mysqli_query($conn,"SELECT * FROM list;");
     echo "No employees found!";
     }
 ?>
-</body>
-</html>
+ <?php include "./templates/footer.php";?>

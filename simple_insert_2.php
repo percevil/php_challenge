@@ -1,5 +1,6 @@
 <?php
 include_once "./includes/connect2.php";
+mysqli_query($conn,"INSERT INTO inventory(id, name, weight, length, width, depth) VALUES (1234,'Percy',12,14,99,66);");
 $fetch = mysqli_query($conn,"SELECT * FROM inventory;");
 include "./templates/header.php";
 ?>

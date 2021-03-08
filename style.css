@@ -1,62 +1,26 @@
-:root{
-
-}
-
-.header {
-    height: 30vh;
-    width: 30vw;
-}
-
-.container1, .container2{
-    display: flex;
-    height: 50vh;
-    display: inline-block;
-}
-
-
-h1{
-    display:flex ;
-    justify-content: center;
-    width: 100vw;
-    font-size: 2em;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
    
 }
 
-.hlink, .blink{
+.title1, .title2, .blink, .hlink{
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    font-family: poppins;
+    text-decoration:none;
 }
+  
 
-.form_container{
-    display: flex; 
-     justify-content: center; 
-    width: 100vw;
-
-}
-.app_title{
-    display: flex; 
-    justify-content: center; 
-}
-.inputs{
-     display: flex;  
-     flex-direction: column;
-    justify-content: center; 
-
-}
-input, button{
+.footer{
     display: flex;
-    justify-content: center; 
-    width: 30vw;
+    justify-content: flex-end;
+    align-content: center;
+    font-family: poppins;
+    font-size: 3px;
 }
 
 
-/* Items in Footer */
-.footer {
-    height: 10vh; 
-    width: 30vw;
-    display: flex;
-    align-items: flex-end;
-}
 
 
-/* Items in Footer */

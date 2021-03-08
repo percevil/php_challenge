@@ -1,10 +1,5 @@
-
-
 <footer>
-<h4> Copyright 2019</h4>
+<p class="footer">Made in co-operation by Bethesda & ID</p>
 </footer>
-
-
-
 </body>
 </html>
