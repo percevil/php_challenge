@@ -1,6 +1,6 @@
 <?php
 // INVENTORY ADD TO DB INSERT INTO
-include_once 'connect2.php';
+include_once 'connect.php';
 
 $name= $_POST['name'];
 $weight = $_POST['weight'];

@@ -1,11 +1,30 @@
 <?php
 include_once "./includes/connect2.php";
-$fetch = mysqli_query($conn,"SELECT * FROM inventory;");
+
+$fetch = mysqli_query($conn,"SELECT * FROM inventory 
+(id, name, weight, length, width, depth) VALUES 
+(\"".$_POST["id"]."\", \"".$_POST["name"]."\",\"".$_POST["weight"]."\", \"".$_POST["length"]."\", \"".$_GET["width"]."\", \"".$_GET["depth"]."\");");
+
+// $fetch = mysqli_query($conn,"SELECT * FROM inventory;");
+
+
+
+
 include "./templates/header.php";
 ?>
     <title>HI DI DI INVENTORY APP</title>
 <body>
-    <?php
+
+
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+Z
+
+    <!-- <?php
     $x=0;
     if(mysqli_num_rows($fetch) > 0){
     ?>
@@ -41,8 +60,6 @@ include "./templates/header.php";
     else{
     echo "No products found!";
     } 
-
-    echo "No products found!";
-?>
+?> -->
 
 <?php include "./templates/footer.php";?>

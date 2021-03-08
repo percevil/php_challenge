@@ -1,6 +1,13 @@
 
 <?php
 include_once "./includes/connect2.php";
+
+mysqli_query($conn,"INSERT INTO inventory(id, name, weight, length, width, depth) VALUES 
+ (\"".$_POST["id"]."\", \"".$_POST['name']."\",\"".$_POST["weight"]."\", \"".$_POST["length"]."\", \"".$_POST["width"]."\", \"".$_POST["depth"]."\");");
+
+// mysqli_query($conn,"INSERT INTO inventory(id, name, weight, length, width, depth) VALUES (1890,'jonsfdfnmy',12,14,99,66);");
+// mysqli_query($conn,$TEST);
+
 $fetch = mysqli_query($conn,"SELECT * FROM inventory"); 
 include "./templates/header.php";
 ?> 
@@ -21,7 +28,8 @@ include "./templates/header.php";
  <!-- <form onsubmit="ajaxCall()" class="form_container" action="./includes/add_new2.php" "> -->
  <form method="post" action="add_new2.php">  
 <div class="inputs">
-        <input type="text" id="id" name="id" placeholder="">
+
+        <input type="text" id="id" name="id" placeholder="id">
         <br>
         <input type="text" id="name" name="name" placeholder="Product Name">
         <br>
@@ -42,33 +50,49 @@ include "./templates/header.php";
 </div>
  </form>
  <?php
+echo $_POST["id"];
 echo $_POST["name"];
-echo $name;
-echo "<br>";
-echo "weight";
-echo $weight;
-echo "<br>";
-echo "length";
-echo $length;
-echo "<br>";
-echo "width";
-echo $width;
-echo "<br>";
-echo "depth";
-echo $depth;
+echo $_POST["weight"];
+echo $_POST["length"];
+echo $_POST["width"];
+echo $_POST["depth"];
+
 ?>
+
  <script src="main.js"></script>
  <?php
- $TEST = "INSERT INTO inventory(id, name, weight, length, width, depth) VALUES (".$_POST["name"]."\", ".$_POST["weight"]."\");";
- echo $TEST;
+// **************************
+//  $TEST = "INSERT INTO inventory(id, name, weight, length, width, depth) VALUES 
+//  (\"".$_POST["name"]."\", \"".$_POST["weight"]."\", \"".$_POST["length"]."\", \"".$_POST["width"]."\", \"".$_POST["depth"]."\");";
+// **************************
+// mysqli_query($conn,$TEST);
+//  echo $TEST;
+// *************************
 
- //$TEST = "INSERT INTO inventory(id, name, weight, length, width, depth) VALUES (".$_POST["name"]."\",".$_POST["weight"]."\");";
- echo $TEST;
+//  $TEST=mysqli_query($conn,"INSERT INTO inventory(id, name, weight, length, width, depth) VALUES (1890,'john',12,14,99,66);");
+
+// echo $TEST;
+ 
  ?>
 <?php
+
+// $TEST = "INSERT INTO inventory(id, name, weight, length, width, depth) VALUES 
+//  (\"".$_POST["name"]."\", \"".$_POST["weight"]."\", \"".$_POST["length"]."\", \"".$_POST["width"]."\", \"".$_POST["depth"]."\");";
+//  echo $TEST;
+
+
+
 //  mysqli_query($conn,$TEST);
 
-//  mysqli_query($conn,"INSERT INTO inventory(id, name, weight, length, width, depth) VALUES ($_POST,$_POST["name"],12,14,99,66);");
+// $TEST = "INSERT INTO inventory(id, name, weight, length, width, depth) VALUES 
+// (\"".$_POST["name"]."\" ,);";
+// echo $TEST;
+
+
+
+
+
+//  mysqli_query($conn,"INSERT INTO inventory(id, name, weight, length, width, depth) VALUES (1234,"john",12,14,99,66);");
 
 
 
